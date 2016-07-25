@@ -2089,7 +2089,7 @@ li {
   padding: 0; }
 
 .navbar {
-  background-color: #071e4a;
+  background-color: #1a2449;
   color: #FFFFFF;
   min-height: auto; }
   .navbar-list-icons {
@@ -2103,7 +2103,7 @@ li {
     margin-right: 0.75em; }
 
 .values-wrapper {
-  background-color: #25e0c3; }
+  background-color: #504afb; }
   .values-wrapper .btn {
     margin-bottom: 1em; }
   .values-wrapper .parameterSelector {
@@ -2111,16 +2111,18 @@ li {
   .values-wrapper .panel-heading {
     text-align: center;
     text-transform: uppercase;
-    color: #071e4a; }
+    color: #1a2449; }
 
 .btn {
-  padding: 1em; }
+  padding: 0.2em; }
   .btn-primary {
-    background-color: transparent;
-    border: 1px solid #FFFFFF; }
+    background-color: #FFFFFF;
+    color: #504afb;
+    border-radius: 0.5em; }
     .btn-primary.active {
-      background-color: #071e4a; }
+      background-color: #1a2449;
+      border-color: 1px solid #FFFFFF; }
     .btn-primary:hover {
-      background-color: #092761; }
+      background-color: #212d5c; }
 
 /*# sourceMappingURL=style.css.map */

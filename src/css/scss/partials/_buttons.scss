@@ -1,11 +1,13 @@
 .btn{
-	padding: 1em;
+	padding: 0.2em;
 
 	&-primary{
-		background-color: transparent;
-		border: 1px solid $color-white;
+		background-color: $color-white;
+        color: $color-p-2;
+        border-radius: 1em;
 		&.active{
 			background-color: $color-p-1;
+            border-color: 1px solid $color-white;
 		}
 		&:hover{
 			background-color: lighten($color-p-1, 5%);
