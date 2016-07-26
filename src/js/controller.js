@@ -49,18 +49,12 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
             $scope.sendModel();
         }
     });
-                         
+    
     $scope.sendModel = function () {
         $scope.model.size = $scope.model.risk * ($scope.model.complexity + $scope.model.effort);
         console.log("LOG: Size: " + $scope.model.size);
         socket.emit('updateModel', {
-            risk: $scope.model.risk,
-            effort: $scope.model.effort,
-            complexity: $scope.model.complexity,
-            size: $scope.model.size,
-            userName: $scope.model.userName,
-            connected: $scope.model.connected
-            //userId: $scope.model.userId
+            model: $scope.model
         });
     };
     
@@ -71,7 +65,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
  
     //When connection is established make green the connection icon
     socket.on('connect', function (data) {
-        console.log("SOxket Connection Established");
+        console.log("Socket Connection Established");
     });
  
     //When connection is off make red the connection icon
