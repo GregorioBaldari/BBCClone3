@@ -72,7 +72,7 @@
     </div>
     <div>
 
-        <pageslide ps-open="checked" ps-side="left">
+        <pageslide ps-open="checked" ps-side="left" style="background-color: red;">
             <div style="padding:20px">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
                 <h2>Hello User</h2>
@@ -81,6 +81,24 @@
                     <input ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
                     <input ng-model="model.room" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
                     <input ng-model="model.password" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Size Only (Traditional)
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Risk*Size
+                      </label>
+                    </div>
+                    <div class="radio disabled">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                        Risks*Complexity*Size
+                      </label>
+                    </div>
                 </div>
                 <a ng-click="saveConnectionData()" class="tiny button">Save Data</a>
             </div>
