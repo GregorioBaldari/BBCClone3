@@ -24,36 +24,11 @@
         </ul>
         <h6 class="pull-right online">&#9733;</h6>
     </div>
-    <div>
+    <div ng-if="model.mode=='option1'">
         <div>
             <p class="size-result">{{model.size}}</p>
         </div>
         <div class="values-wrapper">
-            <div class="">
-                <div class="panel-heading selector-heading">
-                    Risk
-                </div>
-                <div class="panel-body">
-                    <div class="parameterSelector clearfix">
-                        <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="1">1</button></div>
-                        <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="2">2</button></div>
-                        <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="3">3</button></div>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-                <div class="panel-heading selector-heading">
-                    Complexity
-                </div>
-                <div class="panel-body">
-                    <div class="parameterSelector clearfix">
-                        <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="0">0</button></div>
-                        <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="1">1</button></div>
-                        <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="2">2</button></div>
-                        <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="3">3</button></div>
-                    </div>
-                </div>
-            </div>
             <div class="">
                 <div class="panel-heading selector-heading">
                     Effort
@@ -65,13 +40,96 @@
                         <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="3">3</button></div>
                         <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="5">5</button></div>
                         <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="8">8</button></div>
+                        <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="13">13</button></div>
+                        <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="21">21</button></div>
+                        <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="34">34</button></div>
+                        <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="55">55</button></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div ng-if="model.mode=='option2'">
+      <div>
+          <p class="size-result">{{model.size}}</p>
+      </div>
+      <div class="values-wrapper">
+          <div class="">
+              <div class="panel-heading selector-heading">
+                  Complexity
+              </div>
+              <div class="panel-body">
+                  <div class="parameterSelector clearfix">
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="0">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="1">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="2">3</button></div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="panel-heading selector-heading">
+                  Size
+              </div>
+              <div class="panel-body">
+                  <div class="parameterSelector clearfix">
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="1">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="2">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="3">3</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="5">5</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="8">8</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="13">13</button></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div ng-if="model.mode=='option3'">
+      <div>
+          <p class="size-result">{{model.size}}</p>
+      </div>
+      <div class="values-wrapper">
+          <div class="">
+              <div class="panel-heading selector-heading">
+                  Risk
+              </div>
+              <div class="panel-body">
+                  <div class="parameterSelector clearfix">
+                      <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="1">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="2">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary risk-selector col-xs-12" ng-model="model.risk" btn-radio="3">3</button></div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="panel-heading selector-heading">
+                  Complexity
+              </div>
+              <div class="panel-body">
+                  <div class="parameterSelector clearfix">
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="1">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="2">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="3">3</button></div>
+                  </div>
+              </div>
+          </div>
+          <div class="">
+              <div class="panel-heading selector-heading">
+                  Size
+              </div>
+              <div class="panel-body">
+                  <div class="parameterSelector clearfix">
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="1">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="2">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="3">3</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="5">5</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="8">8</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary parameterSelectorItem col-xs-12" ng-model="model.effort" btn-radio="8">13</button></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
     <div>
-
         <pageslide ps-open="checked" ps-side="left" style="background-color: red;">
             <div style="padding:20px">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
@@ -81,21 +139,21 @@
                     <input ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
                     <input ng-model="model.room" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
                     <input ng-model="model.password" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
-                    <div class="radio">
+                    <div>
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <input type="radio" ng-model="model.mode" value="option1">
                         Size Only (Traditional)
                       </label>
                     </div>
-                    <div class="radio">
+                    <div>
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        <input type="radio" ng-model="model.mode" value="option2">
                         Risk*Size
                       </label>
                     </div>
-                    <div class="radio disabled">
+                    <div>
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                        <input type="radio" ng-model="model.mode" value="option3">
                         Risks*Complexity*Size
                       </label>
                     </div>

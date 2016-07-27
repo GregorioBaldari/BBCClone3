@@ -9,12 +9,16 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
         connected: "true",
         userName: "Anonymous",
         password: "",
-        room: ""
+        room: "",
+        mode:"option1"
         //userId: undefined
     };
     $scope.userData = {};
     $scope.connectionStatus = false;
-    
+
+    //Default Mode is Effort Only (for now)
+    $scope.selectionMode = 'option1';
+
     //Save form data in the menu
     $scope.saveConnectionData = function () {
         $scope.toggle();
@@ -28,28 +32,28 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
         });
         $scope.sendModel();
     };
-    
+
     //Menu open/close variable
     $scope.checked = false; // This will be binded using the ps-open attribute
-    
+
     $scope.$watch('model.risk', function (newValue, oldValue) {
         if (newValue !== oldValue) {
             $scope.sendModel();
         }
     });
-    
+
     $scope.$watch('model.effort', function (newValue, oldValue) {
         if (newValue !== oldValue) {
             $scope.sendModel();
         }
     });
-    
+
     $scope.$watch('model.complexity', function (newValue, oldValue) {
         if (newValue !== oldValue) {
             $scope.sendModel();
         }
     });
-    
+
     $scope.sendModel = function () {
         $scope.model.size = $scope.model.risk * ($scope.model.complexity + $scope.model.effort);
         console.log("LOG: Size: " + $scope.model.size);
@@ -57,22 +61,21 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
             model: $scope.model
         });
     };
-    
+
     //Open or close the menu
     $scope.toggle = function () {
         $scope.checked = !$scope.checked;
     };
- 
+
     //When connection is established make green the connection icon
     socket.on('connect', function (data) {
         console.log("Socket Connection Established");
     });
- 
+
     //When connection is off make red the connection icon
     socket.on('disconnect', function () {
         console.log('Disconnected');
         $('.online').css('color', 'red');
     });
-    
-}]);
 
+}]);
