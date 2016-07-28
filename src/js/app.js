@@ -10,7 +10,7 @@ mainApp.factory('socket', ['$rootScope', function ($rootScope) {
     //var socket = io("https://wesizeit.herokuapp.com");
     var socket = io('http://localhost:3000');
   return {
-      
+
     getSocket : function () {
         return socket;
     },
@@ -22,9 +22,9 @@ mainApp.factory('socket', ['$rootScope', function ($rootScope) {
                 callback.apply(socket, args);
             });
         }
-        
+
         socket.on(eventName, wrapper);
-        
+
         return function () {
             socket.removeListener(eventName, wrapper);
         };
