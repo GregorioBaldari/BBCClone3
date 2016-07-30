@@ -15,8 +15,27 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
     $scope.userData = {};
     $scope.connectionStatus = false;
 
+    $scope.room = '';
+
     // Default Mode is Effort Only (for now)
-    $scope.selectionMode = 'option1';
+    $scope.roomMode = 'option1';
+
+    //User decides if be connected or not
+    // If yes listen for 'roomOpen' eventName
+    // and set the room mode
+    // freeze the room mode checkbox
+    // set the online status to ON
+
+    // Join the Room sending 'entering'
+    // check if exists joining event
+
+    $scope.enterRoom = function () {
+      socket.emit('enterRoom', $scope.room );
+    };
+
+    socket.on('setMode', function (roomMode){
+      $scope.roomMode = roomMode;
+    });
 
     socket.on('dashboard_connected', function (data){
       console.log('Dashboard connected in Room: ' + socket.room );
@@ -69,6 +88,14 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
           $scope.model.size = $scope.model.effort*$scope.model.complexity*$scope.model.risk;
       };
       $scope.sendModel();
+    };
+
+    $scope.spike = function () {
+        // $scope.model.size = $scope.model.risk * ($scope.model.complexity + $scope.model.effort);
+        console.log("LOG: SPIKE: " + $scope.model.size);
+        socket.emit('spike', {
+            model: $scope.model
+        });
     };
 
     $scope.sendModel = function () {
