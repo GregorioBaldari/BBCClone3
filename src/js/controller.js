@@ -18,6 +18,10 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
     // Default Mode is Effort Only (for now)
     $scope.selectionMode = 'option1';
 
+    socket.on('dashboard_connected', function (data){
+      console.log('Dashboard connected in Room: ' + socket.room );
+    })
+
     // Save form data in the menu
     $scope.saveConnectionData = function () {
         $scope.toggle();
