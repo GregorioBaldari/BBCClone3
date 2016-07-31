@@ -24,7 +24,7 @@
         </ul>
         <h6 class="pull-right online">&#9733;</h6>
     </div>
-    <div ng-if="model.mode=='option1'">
+    <div ng-if="room.mode=='option1'">
         <div>
             <p class="size-result">{{model.size}}</p>
         </div>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div ng-if="model.mode=='option2'">
+    <div ng-if="room.mode=='option2'">
       <div>
           <p class="size-result">{{model.size}}</p>
       </div>
@@ -60,15 +60,15 @@
               </div>
               <div class="panel-body">
                   <div class="parameterSelector clearfix">
-                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="0">1</button></div>
-                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="1">2</button></div>
-                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="2">3</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="1">1</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="2">2</button></div>
+                      <div class="col-xs-4"><button class="btn btn-primary complexity-selector col-xs-12" ng-model="model.complexity" btn-radio="3">3</button></div>
                   </div>
               </div>
           </div>
           <div class="">
               <div class="panel-heading selector-heading">
-                  Size
+                  Effort
               </div>
               <div class="panel-body">
                   <div class="parameterSelector clearfix">
@@ -83,7 +83,7 @@
           </div>
       </div>
     </div>
-    <div ng-if="model.mode=='option3'">
+    <div ng-if="room.mode=='option3'">
       <div>
           <p class="size-result">{{model.size}}</p>
       </div>
@@ -114,7 +114,7 @@
           </div>
           <div class="">
               <div class="panel-heading selector-heading">
-                  Size
+                  Effort
               </div>
               <div class="panel-body">
                   <div class="parameterSelector clearfix">
@@ -137,23 +137,23 @@
                 <p>Tell me whou you are</p>
                 <div class="input-group">
                     <input ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
-                    <input ng-model="model.room" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
-                    <input ng-model="model.password" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+                    <input ng-model="room.name" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
+                    <input ng-model="room.key" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
                     <div>
                       <label>
-                        <input type="radio" ng-model="model.mode" value="option1">
+                        <input type="radio" ng-model="room.mode" value="option1" ng-checked="room.mode ==='option1'">
                         Size Only (Traditional)
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" ng-model="model.mode" value="option2">
+                        <input type="radio" ng-model="room.mode" value="option2" ng-checked="room.mode ==='option2'">
                         Risk*Size
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="radio" ng-model="model.mode" value="option3">
+                        <input type="radio" ng-model="room.mode" value="option3" ng-checked="room.mode ==='option3'">
                         Risks*Complexity*Size
                       </label>
                     </div>
