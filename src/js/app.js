@@ -7,8 +7,8 @@ var mainApp = angular.module('mainApp', [
 //Change socket configuration to link to server on local or remote.
 //To use server on local use 'node server.js' command
 mainApp.factory('socket', ['$rootScope', function ($rootScope) {
-    var socket = io("https://wesizeit.herokuapp.com");
-    //var socket = io('http://localhost:3000');
+    //var socket = io("https://wesizeit.herokuapp.com");
+    var socket = io('http://localhost:3000');
   return {
 
     getSocket : function () {
