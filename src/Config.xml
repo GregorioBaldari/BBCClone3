@@ -2,7 +2,7 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.phonegap.example"
-    versionCode = "10" 
+    versionCode = "10"
     version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
@@ -10,15 +10,17 @@
     <name>Story Pointer</name>
 
     <description>
-        An example for phonegap build docs. 
+        An example for phonegap build docs.
     </description>
 
     <author href="https://build.phonegap.com" email="gregorio.baldari@gmail.com.com">
         Gregorio Baldari
     </author>
 
+    <preference name="phonegap-version" value="cli-6.3.0" />
+
     <preference name="Orientation" value="landscape" />
-    
+
 <!--    <gap:plugin name="org.li8.inappbrowser" version="0.1" />-->
-    
+
 </widget>
