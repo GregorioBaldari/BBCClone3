@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.phonegap.example"
-    versionCode = "10"
-    version     = "1.0.0" >
+    id          = "com.scrumrun.poker"
+    versionCode = "1"
+    version     = "0.0.2"
+    versionName ="Beta">
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Scrum Run</name>
+    <name>Scrumrun Pocker</name>
 
     <description>
-        An example for phonegap build docs.
+        Pocker Game for Scrum Run
     </description>
 
     <author href="https://build.phonegap.com" email="gregorio.baldari@gmail.com.com">

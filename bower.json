@@ -3,17 +3,16 @@
   "version" : "1.0.0",
   "dependencies" : {
       "bootstrap" : "latest",
-      "userapp-phonegap" : "latest",
-        "jquery" : "latest",
-        "jquery-ui" : "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-touch":"latest",
-        "angular-route": "latest",
-        "angular-ui-bootstrap-bower" : "0.13.4",
-        "angular-sanitize" : "latest",
-        "sio-client" : "latest"
+      "jquery" : "latest",
+      "jquery-ui" : "latest",
+      "font-awesome": "latest",
+      "animate.css": "latest",
+      "angular": "latest",
+      "angular-touch":"latest",
+      "angular-route": "latest",
+      "angular-ui-bootstrap-bower" : "0.13.4",
+      "angular-sanitize" : "latest",
+      "sio-client" : "latest"
   },
   "resolutions" : {
         "angular" : "1.4.7"
