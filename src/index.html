@@ -130,12 +130,12 @@
       </div>
     </div>
     <div>
-        <pageslide ps-open="checked" ps-side="left" style="background-color: red;">
-            <div style="padding:20px">
+        <pageslide ps-open="checked" ps-side="left" ps-size="100%" class="menu-wrapper">
+            <div class="menu">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
                 <h2>Hello User</h2>
                 <p>Tell me whou you are</p>
-                <div class="input-group">
+                <div class="">
                     <input ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
                     <input ng-model="room.name" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
                     <input ng-model="room.key" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">

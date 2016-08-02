@@ -2137,4 +2137,10 @@ li {
   font-size: 12em;
   text-align: center; }
 
+.menu {
+  padding: 1em;
+  text-align: center; }
+  .menu-wrapper {
+    background-color: #FFFFFF; }
+
 /*# sourceMappingURL=style.css.map */
