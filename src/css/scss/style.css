@@ -2731,6 +2731,10 @@ li {
   margin: 0;
   padding: 0; }
 
+/* line 1, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_layout.scss */
+.panel-body {
+  padding: 1em 0; }
+
 /* line 145, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
 .navbar {
   background-color: #1a2449;
@@ -2755,11 +2759,17 @@ li {
   background-color: #504afb; }
   /* line 168, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .btn {
-    margin-bottom: 1em; }
-  /* line 171, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
+    float: none;
+    margin-bottom: 1em;
+    height: 2em;
+    width: 2em; }
+    /* line 173, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
+    .values-wrapper .btn-wrapper {
+      text-align: center; }
+  /* line 177, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .parameterSelector {
     border-bottom: 1px solid #FFFFFF; }
-  /* line 174, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  /* line 180, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .panel-heading {
     text-align: center;
     text-transform: uppercase;
@@ -2780,5 +2790,10 @@ li {
     /* line 12, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_buttons.scss */
     .btn-primary:hover {
       background-color: #212d5c; }
+
+/* line 1, /Users/antoninoriesi/Desktop/wesizeit/bitbucket/web-size-it-mobile/src/css/scss/partials/_text.scss */
+.size-result {
+  font-size: 12em;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
