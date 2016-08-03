@@ -166,7 +166,13 @@
 .values-wrapper{
 	background-color: $color-p-2;
 	.btn{
+        float:none;
 		margin-bottom: 1em;
+        height: 2em;
+        width: 2em;
+        &-wrapper{
+            text-align: center;
+        }
 	}
 	.parameterSelector{
 		border-bottom: 1px solid $color-white;

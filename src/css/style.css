@@ -2088,6 +2088,9 @@ li {
   margin: 0;
   padding: 0; }
 
+.panel-body {
+  padding: 1em 0; }
+
 .navbar {
   background-color: #1a2449;
   color: #FFFFFF;
@@ -2105,7 +2108,12 @@ li {
 .values-wrapper {
   background-color: #504afb; }
   .values-wrapper .btn {
-    margin-bottom: 1em; }
+    float: none;
+    margin-bottom: 1em;
+    height: 2em;
+    width: 2em; }
+    .values-wrapper .btn-wrapper {
+      text-align: center; }
   .values-wrapper .parameterSelector {
     border-bottom: 1px solid #FFFFFF; }
   .values-wrapper .panel-heading {
@@ -2118,11 +2126,21 @@ li {
   .btn-primary {
     background-color: #FFFFFF;
     color: #504afb;
-    border-radius: 0.5em; }
+    border-radius: 1em; }
     .btn-primary.active {
       background-color: #1a2449;
       border-color: 1px solid #FFFFFF; }
     .btn-primary:hover {
       background-color: #212d5c; }
+
+.size-result {
+  font-size: 12em;
+  text-align: center; }
+
+.menu {
+  padding: 1em;
+  text-align: center; }
+  .menu-wrapper {
+    background-color: #FFFFFF; }
 
 /*# sourceMappingURL=style.css.map */
