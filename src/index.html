@@ -133,32 +133,39 @@
         <pageslide ps-open="checked" ps-side="left" ps-size="100%" class="menu-wrapper">
             <div class="menu">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
-                <h2>Hello User</h2>
-                <p>Tell me whou you are</p>
                 <div class="">
-                    <input ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
-                    <input ng-model="room.name" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
-                    <input ng-model="room.key" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
-                    <div>
-                      <label>
-                        <input type="radio" ng-model="room.mode" value="option1" ng-checked="room.mode ==='option1'">
-                        Effort Only (Traditional)
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <input type="radio" ng-model="room.mode" value="option2" ng-checked="room.mode ==='option2'">
-                        Complexity*Effort
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <input type="radio" ng-model="room.mode" value="option3" ng-checked="room.mode ==='option3'">
-                        Risks*Complexity*Effort
-                      </label>
-                    </div>
+                  <label>Your Name</label>
+                  <input id="userName_field" ng-model="model.userName" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
+                  <label>Room Name</label>
+                  <input id="room_name_field" ng-model="room.name" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
+                  <label>Room Key</label>
+                  <input id="room_key_field" ng-model="room.key" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+                  <label>Estimation Mode</label>
+                  <div>
+                    <label>
+                      <input type="radio" ng-model="room.mode" value="option1" ng-checked="room.mode ==='option1'">
+                      Effort Only (Traditional)
+                    </label>
+                  </div>
+                  <div>
+                    <label>
+                      <input type="radio" ng-model="room.mode" value="option2" ng-checked="room.mode ==='option2'">
+                      Complexity*Effort
+                    </label>
+                  </div>
+                  <div>
+                    <label>
+                      <input type="radio" ng-model="room.mode" value="option3" ng-checked="room.mode ==='option3'">
+                      Risks*Complexity*Effort
+                    </label>
+                  </div>
                 </div>
-                <a ng-click="saveConnectionData()" class="tiny button">Save Data</a>
+                  <div ng-if="roomConnection=='off'">
+                    <a ng-click="saveConnectionData()" class="tiny button">Connect</a>
+                  </div>
+                  <div ng-if="roomConnection=='on'">
+                    <a ng-click="saveConnectionData()" class="tiny button">Disconnect</a>
+                  </div>
             </div>
         </pageslide>
     </div>

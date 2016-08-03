@@ -19,8 +19,9 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
 
   $scope.room = {};
 
-  // Default Mode is Effort Only (for now)
-  $scope.room.mode = 'option1';
+
+  $scope.roomConnection = 'off' // Connection to room on or off
+  $scope.room.mode = 'option1'; // Default Mode is Effort Only (for now)\
   $scope.room.onLineStatus = 'off';
 
   //User decides if be connected or not
@@ -35,14 +36,51 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
 
   // Save form data in the menu
   $scope.saveConnectionData = function () {
-    $scope.toggle();
-    if ($scope.room.name !== '' && $scope.room.key !== '' && $scope.room.mode !=='') {
-      socket.emit('enterRoom',  $scope.room, function (roomMode) {
-        $scope.setOnlineStatus(roomMode);
-      });
+    //$scope.toggle();
+    if ($scope.roomConnection === 'off') {
+      if ($scope.validateField() === true) {
+        socket.emit('enterRoom',  $scope.room, function (roomMode) {
+          $scope.setOnlineStatus(roomMode);
+          $scope.roomConnection = 'on';
+          $('input').attr("disabled", true);
+        });
+      };
     } else {
-      //NOtify that something is wrong in the room details
+      socket.emit('userDisconnection');
+      $scope.roomConnection = 'off';
+      $('input').attr("disabled", false);
+    }
+  };
+
+  $scope.validateField = function () {
+    var temp = 0;
+    if ($scope.model.userName === '' || $scope.model.userName === undefined) {
+      $("#userName_field").addClass('alert alert-danger');
+      temp = temp - 1;
+    } else {
+      $("#userName_field").removeClass('alert alert-danger');
+      temp = temp + 1;
     };
+    if ($scope.room.name === '' || $scope.room.name === undefined) {
+      $("#room_name_field").addClass('alert alert-danger');
+      temp = temp - 1;
+    } else {
+      $("#room_name_field").removeClass('alert alert-danger');
+      temp = temp + 1;
+    };
+    if ($scope.room.key === '' || $scope.room.key === undefined) {
+      $("#room_key_field").addClass('alert alert-danger');
+      temp = temp - 1;
+    } else {
+      $("#room_key_field").removeClass('alert alert-danger');
+      temp = temp + 1;
+    };
+
+    if(temp === 3 ){
+      return true;
+    } else {
+      return false;
+    }
   };
 
   // If the room is open and successfully enter, we receive the room mode
